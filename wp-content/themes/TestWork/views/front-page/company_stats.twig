@@ -1,0 +1,31 @@
+<div class="company-stats">
+    <div class="container">
+        <h2 class="company-title">Компанія в <span>цифрах</span></h2>
+    </div>
+    <div class="row col-xl-11 justify-content-lg-center justify-content-sm-center align-items-center">
+        <div class="col-xl-6">
+            <img src="{{ post.meta('company_block_1') }}" alt="{{ global_settings.logo.alt }}" class="company-stats-img" />
+        </div>
+        <div class="col-xl-6 col-lg-8">
+            <div class="row justify-content-center">
+                <div class="company-block-stats row align-content-start">
+                    {% for item in post.meta('company_block_2') %}
+                        <div class="col-xl-6 col-sm-6 mb-2">
+                            <div class="company-number">{{ item.number }}</div>
+                            <div class="company-block-title">{{ item.title }}</div>
+                            <div class="company-block-text">{{ item.text }}</div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="more">
+        <span>VIEW MORE</span>
+        <svg width="6" height="8" viewBox="0 0 6 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.18195 0.850037L4.36393 4.03202L1.18195 7.214" stroke="#1E836B" stroke-width="2" />
+        </svg>
+    </a>
+</div>
+
+
