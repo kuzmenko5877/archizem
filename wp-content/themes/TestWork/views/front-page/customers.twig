@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-6">
-                <img src="{{ post.meta('customers_image') }}" alt="alt" class="w-100">
+                <img src="{{ post.meta('customers_image') }}" alt="alt" class="w-100 customers-img">
             </div>
             <div class="col-xl-6" data-aos="fade-left">
                 <div class="text-center">
@@ -35,7 +35,7 @@
                                     <div class="carousel-item {% if loop.index == 1 %}active{% endif %}">
                                         <div class="row align-items-center">
                                             {% for photo in photos|slice(block_index*12, 12) %}
-                                                <div class="col-md-4 p-3 image  ">
+                                                <div class="col-md-4 p-3 image ">
                                                     <img src="{{ photo.services_img }}" alt="{{ global_settings.logo.alt }}" class="img-fluid p-2" style="height: 65px" />
                                                 </div>
                                             {% endfor %}
