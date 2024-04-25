@@ -1,0 +1,30 @@
+<div class="services">
+    <div class="container-fluid">
+        <h2 class="services-title">Послуги</h2>
+        <div class="row" data-aos="zoom-in">
+            {% set count = 0 %}
+            {% for photo in post.meta('services_ repeater') %}
+                {% if count < 2 %}
+                    {# Вывод первых двух фотографий в две колонки #}
+                    <div class="col-xl-6 col-sm-12 p-1">
+                        <div class="photo p-0 position-relative">
+                            <img src="{{ photo.services_img }}" alt="Фото" class="mw-100 mh-100 w-100 h-100 ">
+                            <span class="title">{{ photo.services_title }}</span>
+                        </div>
+                    </div>
+                {% else %}
+                    {# Вывод остальных фотографий внизу #}
+                    <div class="col-xl-3 col-sm-6 p-1">
+                        <div class="photo p-0 position-relative">
+                            <img src="{{ photo.services_img }}" alt="Фото" class="mw-100 w-100">
+                            <span class="title">{{ photo.services_title }}</span>
+                        </div>
+                    </div>
+                {% endif %}
+                {% set count = count + 1 %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
