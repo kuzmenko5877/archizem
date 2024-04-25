@@ -414,6 +414,11 @@ header {
     padding-bottom: clamp(40px, 6.25vw, 120px);
 }
 
+@media (max-width: 1200px) {
+    .customers-img {
+        display: none;
+    }
+}
 
 .customers-title {
     font-size: clamp(24px, 3.33333vw, 64px);
@@ -488,6 +493,13 @@ footer {
     font-size: clamp(12px, 0.72917vw, 14px);
 }
 
+
+@media (max-width: 425px) {
+    .top .nav-link {
+        padding: 0;
+    }
+}
+
 .social {
     justify-content: center;
 }
@@ -518,6 +530,8 @@ footer {
         margin: 5px 4px;
    }
 }
+
+
 
 
 .bottom {
