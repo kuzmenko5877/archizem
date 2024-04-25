@@ -3,10 +3,10 @@
         <div class="row flex-xxl-nowrap">
             <div class="col-xl-5 col-lg-6 col-md-12 col-sm-12 d-flex flex-wrap justify-content-lg-end">
                 {% for img in post.meta('about_block_1') %}
-                    <img src="{{ img.url }}" alt="{{ img.alt }}"  class="mb-2 col-lg-12 col-md-12 about-img">
+                    <img src="{{ img.url }}" alt="{{ img.alt }}"  class="mb-2 col-lg-12 col-md-12 about-img" data-aos="fade-up">
                 {% endfor %}
             </div>
-            <div class="col-xl-7 col-lg-6 d-flex flex-wrap align-items-end">
+            <div class="col-xl-7 col-lg-6 d-flex flex-wrap align-items-end" data-aos="fade-left">
                 <div class="col-lg-11">
                     <h2 class="about-title">{{ post.meta('about_text')}}</h2>
                     <p class="about-textarea ">{{ post.meta('about_textarea')}}</p>
@@ -23,7 +23,7 @@
                     </svg>
                 </a>
                 {% for img in post.meta('about_block_2') %}
-                    <img src="{{ img.url }}" alt="{{ img.alt }}" class="mb-2 col-lg-12 col-md-12 about-block-img-2">
+                    <img src="{{ img.url }}" alt="{{ img.alt }}" class="mb-2 col-lg-12 col-md-12 about-block-img-2" data-aos="fade-left">
                 {% endfor %}
             </div>
         </div>
